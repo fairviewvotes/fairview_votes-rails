@@ -28,21 +28,23 @@ namespace :students do
         submit_button = form.button_with(value: 'Search')
         results_page = form.submit(submit_button)
 
+        registered = false
+
         if results_page.uri.to_s == 'https://www.sos.state.co.us/voter/pages/pub/olvr/regVoterDetail.xhtml'
-          puts "#{u.first_name} #{u.last_name} #{u.email} IS SUCCESSFULLY REGISTERED."
-          u.registered_to_vote = true
-          u.save
+          registered = true
         elsif results_page.uri.to_s == 'https://www.sos.state.co.us/voter/pages/pub/olvr/findVoterReg.xhtml'
           error_span_text = results_page.at('.error').text
 
           if error_span_text == 'If you have questions about your registration information or need further assistance, please contact your County Clerk and Recorder.'
-            puts "#{u.first_name} #{u.last_name} #{u.email} IS SUCCESSFULLY REGISTERED."
-            u.registered_to_vote = true
-            u.save
+            registered = true
           else
-            puts "#{u.first_name} #{u.last_name} #{u.email} IS NOT REGISTERED."
+            registered = false
           end
         end
+
+        puts "#{u.first_name} #{u.last_name} #{u.email} #{ registered ? 'IS SUCCESSFULLY REGISTERED.' : 'IS NOT REGISTERED'}"
+        u.registered_to_vote = registered
+        u.save
 
         puts results_page.uri.to_s
       end
