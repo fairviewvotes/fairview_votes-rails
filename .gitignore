@@ -20,3 +20,6 @@
 
 # Ignore IDEA IDE config files.
 /.idea
+
+# Ignore all test files.
+test.*
