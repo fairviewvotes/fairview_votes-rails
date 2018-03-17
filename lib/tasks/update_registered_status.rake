@@ -42,7 +42,6 @@ namespace :students do
           else
             puts "#{u.first_name} #{u.last_name} #{u.email} IS NOT REGISTERED."
           end
-
         end
 
         puts results_page.uri.to_s
