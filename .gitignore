@@ -23,3 +23,7 @@
 
 # Ignore all test files.
 test.*
+
+# Ignore actual secrets and settings files.
+/config/secrets.yml
+/config/settings.yml

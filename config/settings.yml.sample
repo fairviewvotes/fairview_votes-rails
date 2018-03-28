@@ -1,0 +1,10 @@
+default: &default
+  oauth2:
+    client_id: [YOUR_CLIENT_ID]
+    client_secret: [YOUR_CLIENT_SECRET]
+
+development:
+  <<: *default
+
+production:
+  <<: *default
