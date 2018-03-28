@@ -9,12 +9,18 @@ class SessionsController < ApplicationController
     user = User.find_by_email email
 
     if user.present? # successful log in
-      puts "LOGGED IN"
       flash[:danger] = 'Logged in!'
       log_in user
-      redirect_to user
+
+      user.update_registered_status
+
+      if user.registered_to_vote?
+        redirect_to registration_good_path
+      else
+        redirect_to registration_new_path
+      end
     else
-      puts "EMAIL NOT RECOGNIZED"
+
       flash[:danger] = 'Email not found.'
       redirect_to sessions_new_path
     end

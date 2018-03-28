@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # Registration
+  get 'registration/new'
+  get 'registration/good'
+  post 'registration/check'
+
   ## login
   get 'sessions/new'
   delete '/logout',  to: 'sessions#destroy'
