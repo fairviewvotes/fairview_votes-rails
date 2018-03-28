@@ -15,8 +15,8 @@ class SessionsController < ApplicationController
       redirect_to user
     else
       puts "EMAIL NOT RECOGNIZED"
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
+      flash[:danger] = 'Email not found.'
+      redirect_to sessions_new_path
     end
   end
 
