@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: redirect('/sessions/new')
+
   # Registration
   get 'registration/new'
   get 'registration/good'
