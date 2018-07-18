@@ -1,35 +1,74 @@
 html,
 body {
   color: #fff;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2rem;
+  margin: 0;
   min-height: 100%;
+  padding: 0;
   text-align: center;
 }
 
-h1 {
-  letter-spacing: .2rem;
-  text-transform: uppercase;
+#content {
+  align-items: center;
+  background-image: asset-data-url("BgFlatirons.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex: 1;
+  height: 100%;
+  padding: 0 5rem 12rem 5rem;
 }
 
-.btn-g {
-  background-image: asset-data-url("google-g.png");
-  background-position: 1rem center;
+h1 {
+  font-size: 3rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  word-spacing: .4rem;
+}
+
+iframe {
+  background: #fff;
+  background: rgba(255, 255, 255, .7);
+  flex: 1;
+}
+
+.iframe-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.btn {
+  background: none;
   border-radius: 7px;
-  background-repeat: no-repeat;
-  background-size: auto 70%;
   border: 3px solid #fff;
   color: #fff;
   display: inline-block;
   font-size: 1.5rem;
-  padding: 1.2rem 1rem 1.2rem 5rem;
+  margin: 1rem 0 0 0;
+  padding: .5rem 1rem;
   text-decoration: none;
+  transition: all 1s;
 
   &:hover {
     background-color: rgba(255, 255, 255, .2);
   }
 }
 
+.btn-g {
+  @extend .btn;
+  background-image: asset-data-url("google-g.png");
+  background-position: 1rem center;
+  background-repeat: no-repeat;
+  background-size: auto 60%;
+  padding: 1.2rem 1rem 1.2rem 5rem;
+}
+
 .bg-grad0 { background: linear-gradient(-30deg, #8bd0e8, #5a307a); }
 .bg-grad1 { background: linear-gradient(-30deg, #f7a04f, #84335a); }
 .bg-grad2 { background: linear-gradient(-30deg, #e2783f, #1e6791); }
+.bg-grad3 { background: linear-gradient(-30deg, #cee888, #0e4d7a); }
