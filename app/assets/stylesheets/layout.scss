@@ -1,0 +1,35 @@
+html,
+body {
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+  text-align: center;
+}
+
+h1 {
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+}
+
+.btn-g {
+  background-image: asset-data-url("google-g.png");
+  background-position: 1rem center;
+  border-radius: 7px;
+  background-repeat: no-repeat;
+  background-size: auto 70%;
+  border: 3px solid #fff;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1.2rem 1rem 1.2rem 5rem;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .2);
+  }
+}
+
+.bg-grad0 { background: linear-gradient(-30deg, #8bd0e8, #5a307a); }
+.bg-grad1 { background: linear-gradient(-30deg, #f7a04f, #84335a); }
+.bg-grad2 { background: linear-gradient(-30deg, #e2783f, #1e6791); }
