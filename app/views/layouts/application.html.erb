@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FairviewVotesRails</title>
+    <title>Fairview Votes</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div id="content">
+    <div id="wrapper">
       <h1>Fariview Votes</h1>
       <% flash.each do |message_type, message| %>
         <div class="flash flash-<%= message_type %>"><%= message %></div>
       <% end %>
-
-      <%= yield %>
+      <div id="content">
+        <%= yield %>
+      </div>
+      <div id="footer">
+        <a href="">Fairview Web Team</a>
+      </div>
     </div>
   </body>
 </html>
