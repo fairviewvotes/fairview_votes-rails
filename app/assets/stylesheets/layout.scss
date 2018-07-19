@@ -25,13 +25,16 @@ body {
 
 #content {
   flex: 1;
+  flex-grow: 1;
   padding: 0 5rem 10rem 5rem;
 }
 
 #footer {
+  align-items: flex-end;
+  display: flex;
   flex: 1;
   font-size: 1rem;
-  padding: .2rem .5rem;
+  padding: .5rem;
   text-align: left;
 
   a {
