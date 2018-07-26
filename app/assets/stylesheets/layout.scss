@@ -24,7 +24,9 @@ body {
 }
 
 #content {
+  display: flex;
   flex: 1;
+  flex-direction: column;
   flex-grow: 1;
   padding: 0 5rem 10rem 5rem;
 }
@@ -91,6 +93,68 @@ iframe {
   padding: 1.2rem 1rem 1.2rem 5rem;
 }
 
+.table {
+  display: flex;
+}
+
+.table-row {
+  display: flex;
+  flex: 1;
+
+  div {
+    flex: 1;
+  }
+}
+
+form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 50%;
+}
+
+.field {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 0 0;
+}
+
+.select_bday {
+  display: flex;
+
+  select {
+    flex: 1;
+    margin: 0 .5rem 0 0;
+
+    option { color: #000; }
+  }
+  select:last-of-type {
+    margin-right: 0;
+  }
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  background: none;
+  border-radius: 7px;
+  border: 3px solid #fff;
+  color: #fff;
+  display: block;
+  flex: 1;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.3rem;
+  margin: 0 0 .8rem 0;
+  padding: .2rem .3rem;
+}
+
 .bg-grad0 { background: linear-gradient(-30deg, #8bd0e8, #5a307a); }
 .bg-grad1 { background: linear-gradient(-30deg, #f7a04f, #84335a); }
 .bg-grad2 { background: linear-gradient(-30deg, #e2783f, #1e6791); }
@@ -116,5 +180,15 @@ iframe {
     .btn-g {
       background-position: .5rem center;
       padding: .5rem .5rem .5rem 3rem;
+    }
+
+    form { width: 100%; }
+
+    .select_bday {
+      flex-direction: column;
+
+      select {
+        margin: 0 0 .3rem 0;
+      }
     }
 }
