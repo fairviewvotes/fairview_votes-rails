@@ -2,26 +2,49 @@
 
 <div class="table">
   <div class="table-row">
-    <div>First name</div>
-    <div>Last name</div>
+    <div>First</div>
+    <div>Last</div>
     <div>Email</div>
-    <div>Zip code</div>
+    <div>Zip Code</div>
     <div>Birthday</div>
-    <div>Registered to Vote</div>
+    <div>Registered?</div>
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
-  <% @users.each do |user| %>
-    <div class="table-row">
-      <div><%= user.first_name %></div>
-      <div><%= user.last_name %></div>
-      <div><%= user.email %></div>
-      <div><%= user.zip_code %></div>
-      <div><%= user.birthday %></div>
-      <div><%= user.registered_to_vote? %></div>
-      <div><%= link_to 'Show', user %></div>
-      <div><%= link_to 'Edit', edit_user_path(user) %></div>
-      <div><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-    </div>
-  <% end %>
+  <div class="table-body">
+    <% @users.each do |user| %>
+      <div class="table-row">
+        <div>
+          <span class="label">First Name:</span>
+          <%= user.first_name %>
+        </div>
+        <div>
+          <span class="label">Last Name:</span>
+          <%= user.last_name %>
+        </div>
+        <div>
+          <span class="label">Email:</span>
+          <%= user.email %>
+        </div>
+        <div>
+          <span class="label">Zip Code:</span>
+          <%= user.zip_code %>
+        </div>
+        <div>
+          <span class="label">Birthday:</span>
+          <%= user.birthday %>
+        </div>
+        <div>
+          <span class="label">Registered?:</span>
+          <%= user.registered_to_vote? %>
+        </div>
+        <div><%= link_to 'Show', user %></div>
+        <div><%= link_to 'Edit', edit_user_path(user) %></div>
+        <div><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <%= link_to 'New User', new_user_path, class: "btn" %>
