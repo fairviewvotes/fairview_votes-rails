@@ -11,10 +11,10 @@
   <body>
     <div id="wrapper">
       <h1>Fariview Votes</h1>
-      <% flash.each do |message_type, message| %>
-        <div class="flash flash-<%= message_type %>"><%= message %></div>
-      <% end %>
       <div id="content">
+        <% flash.each do |message_type, message| %>
+          <div class="flash flash-<%= message_type %>"><%= message %></div>
+        <% end %>
         <%= yield %>
       </div>
       <div id="footer">

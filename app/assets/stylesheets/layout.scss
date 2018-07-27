@@ -193,6 +193,27 @@ select {
   padding: .2rem .3rem;
 }
 
+#error_explanation,
+.flash {
+  border-radius: 7px;
+  align-self: stretch;
+  padding: 1rem 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+#error_explanation,
+.flash-error {
+  background: #ff7c77;
+  border: 1px solid #e8615c;
+  color: #590300;
+}
+
+.flash-notice {
+  background: #8bcce5;
+  border: 1px solid #52b3d8;
+  color: #005c7f;
+}
+
 .bg-grad0 { background: linear-gradient(-30deg, #8bd0e8, #5a307a); }
 .bg-grad1 { background: linear-gradient(-30deg, #f7a04f, #84335a); }
 .bg-grad2 { background: linear-gradient(-30deg, #e2783f, #1e6791); }
