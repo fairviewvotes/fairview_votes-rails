@@ -214,6 +214,11 @@ select {
   color: #005c7f;
 }
 
+.users-show {
+  text-align: left;
+  width: 60%;
+}
+
 .bg-grad0 { background: linear-gradient(-30deg, #8bd0e8, #5a307a); }
 .bg-grad1 { background: linear-gradient(-30deg, #f7a04f, #84335a); }
 .bg-grad2 { background: linear-gradient(-30deg, #e2783f, #1e6791); }
@@ -263,4 +268,6 @@ select {
       display: block;
       padding: 1rem;
     }
+
+    .users-show { width: 100%; }
 }
